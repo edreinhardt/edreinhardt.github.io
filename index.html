@@ -40,6 +40,13 @@
     </footer>
     <script> 
     const bing=document.getElementById("id1")
-    bing.addEventListener("click", () => bing.style.color="red")
+    let hue=0
+    bing.addEventListener("click", () => setInterval( ()=> {
+        bing.style.color="hsl("+hue+"deg 100% 50%)"
+        hue++
+        if (hue>360){
+            hue=0
+        }
+    },10))
     </script>
 </body>
